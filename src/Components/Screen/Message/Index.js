@@ -21,7 +21,7 @@ function Message(props) {
         11: "Nov",
         12: "Dec",
     };
-     
+
     // Storing data to local storage time,date and message
     const hendleCreate = (e) => {
         if (message) {
@@ -38,9 +38,9 @@ function Message(props) {
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
-            hendleCreate ()
+            hendleCreate()
         }
-      }
+    }
 
     useEffect(() => {
         // fetching message from the local storage
@@ -56,7 +56,7 @@ function Message(props) {
                 <div className="GroupList1" >
                     {
                         props.size < 550 &&
-                        <div style={{ fontSize: 22, color: 'gray' }} onClick={() => { window.location.replace('/'); }}>
+                        <div style={{ fontSize: 22, color: 'gray' }} onClick={() => { window.location.reload() }}>
                             <AiOutlineArrowLeft />
                         </div>}
                     <div className="Substr1" style={{ backgroundColor: props.colorCode }}>
@@ -91,9 +91,9 @@ function Message(props) {
 
 
             <div className="messageInput">
-                <input type="text" placeholder="Enter your Text here...." style={{ width: '99%', height: '12vh', border: 0, outline: 0, borderRadius: 10, paddingLeft: 10 }} onKeyDown={handleKeyDown} value={message} onChange={(e) => setMessage(e.target.value)} />
+                <textarea type="text" placeholder="Enter your Text here...." style={{ fontSize: 20, width: '99%', height: '10vh', border: 0, outline: 0, borderRadius: 10, paddingLeft: 10, paddingTop: '10px' }} onKeyDown={handleKeyDown} value={message} onChange={(e) => setMessage(e.target.value)} multiple={true} aria-multiline={true} />
+                {/* <input type="text" placeholder="Enter your Text here...." style={{ fontSize: 20, width: '99%', paddingBottom: '8vh', border: 0, outline: 0, borderRadius: 10, paddingLeft: 10, paddingTop: '10px' }} onKeyDown={handleKeyDown} value={message} onChange={(e) => setMessage(e.target.value)} multiple={true} aria-multiline={true} rows="3" /> */}
                 <p style={{ position: 'absolute', bottom: 15, right: 20, borderWidth: 0, outline: 0, borderRadius: 20, cursor: 'pointer', fontSize: 25, color: '#ABABAB' }} onClick={hendleCreate}><IoMdSend /></p>
-
             </div>
         </div>
     );

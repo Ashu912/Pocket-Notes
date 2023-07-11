@@ -5,6 +5,7 @@ import '../../css/Modal.css'
 import Message from "../Message/Index";
 import img from '../../assest/homepage.png'
 import { GrAdd } from 'react-icons/gr'
+import {IoMdLock} from 'react-icons/io' 
 
 function Home() {
     const [modal, setModal] = useState(false);
@@ -83,7 +84,7 @@ function Home() {
                         <>
                             <p style={{ fontSize: 31, fontWeight: '500', marginTop: 10 }}>Pocket Note</p>
                             <div className="createNote1" onClick={toggleModal}>
-                                <p><GrAdd /> Create Notes Group</p>
+                                <p><span style={{ fontSize: 18, color: 'white', marginRight: 5, marginBottom: 10 }}>+</span> Create Notes Group</p>
                             </div>
                             <div className="dan1">
                                 <GroupList onClick={getData} />
@@ -112,7 +113,7 @@ function Home() {
                                     <p style={{ fontSize: 30, fontWeight: '500' }}>Pocket Notes</p>
                                     <p style={{ fontSize: 20, fontWeight: '400' }}>Send and Recive Message without keeping your Phone online</p>
                                     <p style={{ marginBottom: -200, fontSize: 20, fontWeight: '400' }}>Use Pocket Note on Up to 4 link devices and 1 mobile phone</p>
-                                    <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '50%' }}>End-to-end encrypted</p>
+                                    <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '52%' }}><IoMdLock />End-to-end encrypted</p>
                                 </div>
                             </div>
                         }
