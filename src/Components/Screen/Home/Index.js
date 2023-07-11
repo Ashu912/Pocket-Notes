@@ -13,7 +13,7 @@ function Home() {
     const [messid, setMessID] = useState('');
     const [Gname, setGName] = useState('');
     const [colorCode, setColorCode] = useState('');
-
+// used to toggle message screen and home screen
     const toggleModal = () => {
         setModal(!modal);
     };
@@ -24,8 +24,9 @@ function Home() {
         document.body.classList.remove('active-modal')
     }
 
+    // onclick on specific group  we are fetching the data 
+
     const getData = (data) => {
-        console.log("For Message box" + JSON.stringify(data));
         setMessName(data.hname)
         setMessColorCode(data.hColor)
         setMessID(data.hid)
@@ -34,10 +35,7 @@ function Home() {
 
     const [tasks, setTasks] = useState([]);
 
-    // const showTime = date.getHours()
-    //     + ':' + date.getMinutes()
-    //     + ":" + date.getSeconds();
-
+    // for creating group
     const hendleCreate = (e) => {
         if (Gname) {
             const newTask = { id: new Date().getTime().toString(), gname: Gname, colorCode: colorCode };
@@ -51,7 +49,7 @@ function Home() {
 
 
     const [screenSize, setScreenSize] = useState(getCurrentDimension());
-
+    // used to fetch the dimention of the screen 
     function getCurrentDimension() {
         return {
             width: window.innerWidth,

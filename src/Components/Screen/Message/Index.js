@@ -2,22 +2,7 @@ import React, { useEffect, useState } from "react";
 import '../../css/Message.css';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { IoMdSend } from 'react-icons/io';
-const data = [
-    { id: 1, name: 'Cuvate Notes', colorCode: '#0047FF' },
-    { id: 2, name: 'Java Notes', colorCode: '#B38BFA' },
-    { id: 3, name: 'Python Online', colorCode: '#FFC0C0' },
-    { id: 4, name: 'SQL', colorCode: '#43E6FC' },
-    { id: 5, name: 'HTML', colorCode: '#F19576' },
-    { id: 6, name: 'CSS', colorCode: '#6691FF' },
-    { id: 7, name: 'Java Script', colorCode: '#FF66F0' },
-    { id: 8, name: 'MongoDB', colorCode: '#0047FF' },
-    { id: 9, name: 'MySQL', colorCode: '#B38BFA' },
-    { id: 10, name: 'Node js', colorCode: '#FFC0C0' },
-    { id: 11, name: 'Express js', colorCode: '#43E6FC' },
-    { id: 12, name: 'Nodemon', colorCode: '#F19576' },
-    { id: 13, name: 'Rest api', colorCode: '#6691FF' },
-    { id: 14, name: 'mujhe nhi pata', colorCode: '#FF66F0' },
-]
+
 
 function Message(props) {
     const [message, setMessage] = useState();
@@ -36,7 +21,8 @@ function Message(props) {
         11: "Nov",
         12: "Dec",
     };
-
+     
+    // Storing data to local storage time,date and message
     const hendleCreate = (e) => {
         if (message) {
             const newMessage = {
@@ -50,10 +36,14 @@ function Message(props) {
         }
     };
 
-    useEffect(() => {
-        // console.log("Chal jaa yrr");
-        // console.log("from Use State" + props.name + props.colorCode + props.id);
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            hendleCreate ()
+        }
+      }
 
+    useEffect(() => {
+        // fetching message from the local storage
         if (localStorage.getItem("MessageList")) {
             const storedList = JSON.parse(localStorage.getItem("MessageList"));
             console.log("Data For id check" + JSON.stringify(storedList));
@@ -101,7 +91,7 @@ function Message(props) {
 
 
             <div className="messageInput">
-                <input type="text" placeholder="Enter your Text here...." style={{ width: '99%', height: '12vh', border: 0, outline: 0, borderRadius: 10, paddingLeft: 10 }} value={message} onChange={(e) => setMessage(e.target.value)} />
+                <input type="text" placeholder="Enter your Text here...." style={{ width: '99%', height: '12vh', border: 0, outline: 0, borderRadius: 10, paddingLeft: 10 }} onKeyDown={handleKeyDown} value={message} onChange={(e) => setMessage(e.target.value)} />
                 <p style={{ position: 'absolute', bottom: 15, right: 20, borderWidth: 0, outline: 0, borderRadius: 20, cursor: 'pointer', fontSize: 25, color: '#ABABAB' }} onClick={hendleCreate}><IoMdSend /></p>
 
             </div>
