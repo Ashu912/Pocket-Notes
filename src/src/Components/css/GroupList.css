@@ -1,0 +1,29 @@
+.GroupList {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.Substr {
+    width: 27px;
+    height: 27px;
+    background-color: #0047FF;
+    padding: 10px;
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.Gname {
+    font-size: 19px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+@media screen and (max-width:500px) {    
+    .GroupList {
+        padding-left: 15px;
+    }
+}

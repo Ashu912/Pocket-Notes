@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.HomeComp {
+    /* background: red; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    margin: auto;
+}
+
+.Group {
+    width: 25%;
+    height: 9999px;
+    padding: 10px;
+    background-color: #FFFFFF;
+
+}
+
+.Group1 {
+    width: 100%;
+    height:fit-content;
+    /* height: 9999px; */
+    /* padding: 10px; */
+    background-color: #FFFFFF;
+
+}
+
+.message {
+    width: 75%;
+    background-color: #F7ECDC;
+    height: 100%;
+    /* padding: 10px; */
+}
+
+.message1 {
+    width: 100%;
+    /* height:100px; */
+    background-color: #F7ECDC;
+    /* height: 100%; */
+    /* padding: 10px; */
+}
+
+.dan {
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+    padding-left: 10px;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+
+}
+
+
+.dan1 {
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+
+}
+
+.dan::-webkit-scrollbar {
+    display: none;
+}
+
+.dan1::-webkit-scrollbar {
+    display: none;
+}
+
+
+.Group1::-webkit-scrollbar {
+    display: none;
+}
+/* for create Note Group Button */
+.createNote {
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 10px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.createNote1 {
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 10px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 1px;
+}
+
+/* Right Side Home Comp */
+
+.parentRightHomeComp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RightHomeComp {
+    text-align: center;
+}
+
+@media screen and (max-width:500px) {    
+    .HomeComp {
+        /* background: red; */
+        /* width: 100%;
+        height: 100vh; */
+        /* display: flex; */
+        overflow: hidden;
+        /* margin: auto; */
+    }
+    .dan1 {
+        width: 100%;
+        height: 75vh;
+        overflow-y: scroll;
+        padding-bottom: 40px;
+        margin-bottom: 30px;
+    }
+    .createNote1{
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,102 @@
+.header {
+    height: 10vh;
+    background-color: #E8E8E8;
+}
+
+.GroupList1 {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.Substr1 {
+    width: 27px;
+    height: 27px;
+    background-color: #0047FF;
+    padding: 10px;
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.Gname1 {
+    font-size: 19px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+.Messagebox {
+    height: 75vh;
+    background-color: blue;
+}
+
+.messaged {
+    width: 100%;
+    height: 75vh;
+    overflow-y: scroll;
+    background-color: #F7ECDC;
+
+}
+
+.subbox {
+    display: flex;
+    padding: 25px;
+}
+
+.messageInput {
+    background-color: #E8E8E8;
+    bottom: 0;
+    height: 40vh;
+    padding: 10px;
+}
+
+.messaged::-webkit-scrollbar {
+    display: none;
+}
+
+.datetime {
+    width: 20%;
+}
+
+.textmsg {
+    width: 70%;
+}
+
+.msscr {
+    height: 11vh;
+}
+
+@media screen and (max-width:500px) {
+    .datetime {
+        width: 30%;
+    }
+
+    .textmsg {
+        width: 60%;
+    }
+
+    .scsr {
+        background-color: green;
+        overflow: hidden;
+    }
+    /* or */
+    .Messagebox {
+        height: 75vh;
+        background-color: blue;
+    }
+    .messageInput {
+        background-color: #E8E8E8;
+        bottom: 0;
+        height: 12vh;
+        padding: 10px;
+    }
+}
